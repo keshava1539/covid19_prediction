@@ -1,39 +1,33 @@
 COVID-19/Pneumonia X-ray Image Classification
-This repository contains a deep learning project aimed at classifying Chest X-ray images to detect whether a patient has Normal lungs or Pneumonia. This can be a valuable tool for assisting in the rapid screening or preliminary diagnosis of respiratory conditions, including those potentially associated with COVID-19.
+📊 Overview
+This project focuses on developing a deep learning model to classify Chest X-ray images. The goal is to accurately distinguish between Normal lung conditions and those indicative of Pneumonia. This can serve as a valuable tool for supporting the rapid screening and preliminary diagnosis of respiratory conditions.
 
-Project Goal
-The primary objective of this project is to build and train a Convolutional Neural Network (CNN) model capable of accurately distinguishing between normal and pneumonia-affected lung X-rays.
+👥 Contributor
+Kallutla Veera Keshava Reddy
 
-Dataset
-The model is designed to work with a dataset structured in directories, typically organized as:
+🧠 Project Highlights
+Image-based Classification: Utilizes Convolutional Neural Networks (CNNs) for robust image analysis.
 
-xray_dataset_covid19/
-├── train/
-│   ├── NORMAL/
-│   └── PNEUMONIA/
-└── test/
-   ├── NORMAL/
-   └── PNEUMONIA/
+Disease Detection: Classifies X-ray images into 'NORMAL' and 'PNEUMONIA' categories.
 
-The notebook specifically loads data from xray_dataset_covid19/train. The two classes identified are NORMAL and PNEUMONIA.
+Standardized Preprocessing: Implements image resizing to 256x256 pixels and uses 3 color channels (RGB) for consistent model input.
 
-Methodology
-The project utilizes a CNN architecture for image classification, implemented using TensorFlow and Keras. Key preprocessing steps and configurations include:
+Efficient Data Loading: Leverages TensorFlow's image_dataset_from_directory for streamlined dataset management and batching.
 
-Image Resizing: All input images are resized to a uniform dimension of 256x256 pixels.
-
-Color Channels: Images are processed with 3 color channels (RGB).
-
-Batch Processing: Data is loaded in batches of 32 for efficient training.
-
-Data Loading: tf.keras.preprocessing.image_dataset_from_directory is used for efficient data loading directly from the directory structure, handling automatic labeling and initial resizing.
-
-Technologies Used
+🔍 Techniques Used
 Python
 
 TensorFlow
 
-Keras
+Keras (for building and training the neural network)
 
-Matplotlib (for visualization, likely during data exploration or model evaluation)
+Matplotlib (for data visualization)
 
+Deep Learning (CNNs)
+
+Image Classification
+
+📁 Files
+model.ipynb: The main Jupyter Notebook containing the model definition, training, and evaluation code.
+
+xray_dataset_covid19/: (Expected directory structure) The dataset should be organized into subdirectories for training, testing, and validation, with 'NORMAL' and 'PNEUMONIA' subfolders within each split.
